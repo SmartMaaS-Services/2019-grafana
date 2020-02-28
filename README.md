@@ -1,19 +1,23 @@
 # 2019-grafana
 Grafana dashboard exports for the first 2019 iteration
 
-Note, currently the following links point to dashboards based on snapshots from February 19th, 2020. Maybe later there will be an anonymous access to the dashboards without time limit.
+The following dashboards with latest data can be accessed anonymously (no login required):
 
 Parking Kiel:<br> 
-https://charts.2019.smartmaas.services/dashboard/snapshot/lTkQIoFD250bvL126C6RdPN2cSMncKBQ?orgId=1&from=now%2Fw&to=now
+https://charts.2019.smartmaas.services/d/Cj5oHQsZz/kiel-parking?orgId=2&from=now%2Fw&to=now
 
 Traffic Kiel:<br> 
-https://charts.2019.smartmaas.services/dashboard/snapshot/1M5LADP6c8VI5sCy6Msw5Kfe3jOFFatR?orgId=1
+https://charts.2019.smartmaas.services/d/ySNWcwyWk/kiel-traffic?orgId=2
 
 Air Quality Kiel:<br> 
-https://charts.2019.smartmaas.services/dashboard/snapshot/dEQX4xP6tD0QJacG65t7OpZTWAInb4M2?orgId=1&from=now%2FM&to=now
+https://charts.2019.smartmaas.services/d/6rMLygUZk/kiel-air-quality?orgId=2&from=now%2FM&to=now
 
 Weather Kiel:<br> 
-https://charts.2019.smartmaas.services/dashboard/snapshot/refUfCxD7Hmrgez8vVrmEHjqCkcHTVio?orgId=1&from=now%2Fd&to=now
+https://charts.2019.smartmaas.services/d/3EEUDlEWz/kiel-weather?orgId=2&from=now%2Fd&to=now
 
-System Monitoring, Glances and cAdvisor:<br> 
-https://charts.2019.smartmaas.services/dashboard/snapshot/fWQr6WzEO89QbQciA17cdrRW5lTRx5Zr?orgId=1
+<br/><br/>
+If you also like to gain access to the System Monitoring dashboard (including Glances and cAdvisor), you need to authenticate at<br>
+https://charts.2019.smartmaas.services/d/94mAjCyWk/kiel-system-monitoring?orgId=1
+
+Please contact us to request login credentials.
+ 
