@@ -1,0 +1,1099 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 13,
+  "iteration": 1616580591459,
+  "links": [],
+  "panels": [
+    {
+      "bgimage": "https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Kiel.svg",
+      "colorMappingMap": [],
+      "colorMappings": [],
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 0,
+        "y": 0
+      },
+      "id": 14,
+      "islocked": false,
+      "islockvisible": false,
+      "links": [],
+      "metricValues": [],
+      "realbgimage": "https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Kiel.svg",
+      "sensors": [],
+      "series": [],
+      "seriesList": [],
+      "sizecoefficient": 20,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  $__time(time_column),\n  value1\nFROM\n  metric_table\nWHERE\n  $__timeFilter(time_column)\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "templateSrv": null,
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "pierosavi-imageit-panel",
+      "uncache": 0.41643354120712694,
+      "valueMappings": []
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 11,
+        "x": 2,
+        "y": 0
+      },
+      "id": 18,
+      "links": [],
+      "options": {
+        "content": "<h1 style=\"text-align: center; font-size: 6em;\">Parkplatzmonitor Kiel</h1>",
+        "mode": "html"
+      },
+      "pluginVersion": "7.3.7",
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  $__time(time_column),\n  value1\nFROM\n  metric_table\nWHERE\n  $__timeFilter(time_column)\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 13,
+        "y": 0
+      },
+      "header_js": "{}",
+      "id": 26,
+      "links": [],
+      "method": "GET",
+      "mode": "image",
+      "params_js": "{\n from:ctrl.range.from.format('x'),  // x is unix ms timestamp\n to:ctrl.range.to.format('x'), \n height:ctrl.height,\n now:Date.now(),\n interval: ctrl.template('$__interval'),\n sample: 'Not escaped: $__interval',\n since:ctrl.lastRequestTime\n}",
+      "request": "http",
+      "responseType": "arraybuffer",
+      "showErrors": true,
+      "showTime": false,
+      "showTimeFormat": "LTS",
+      "showTimePrefix": null,
+      "showTimeValue": "request",
+      "skipSameURL": true,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  $__time(time_column),\n  value1\nFROM\n  metric_table\nWHERE\n  $__timeFilter(time_column)\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "templateResponse": true,
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "ryantxu-ajax-panel",
+      "url": "https://www.ndr.de/nachrichten/schleswig-holstein/parkplatz268_v-contentxl.jpg",
+      "withCredentials": false
+    },
+    {
+      "bgColor": "rgb(31, 55, 92)",
+      "clockType": "24 hour",
+      "countdownSettings": {
+        "customFormat": null,
+        "endCountdownTime": "2020-01-22T09:49:00.000Z",
+        "endText": "00:00:00"
+      },
+      "datasource": null,
+      "dateSettings": {
+        "dateFormat": "DD.MM.YYYY",
+        "fontSize": "20px",
+        "fontWeight": "normal",
+        "showDate": true
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 19,
+        "y": 0
+      },
+      "id": 16,
+      "links": [],
+      "mode": "time",
+      "options": {
+        "bgColor": "dark-blue",
+        "clockType": "24 hour",
+        "countdownSettings": {
+          "endCountdownTime": "2021-03-22T21:33:31+01:00",
+          "endText": "00:00:00"
+        },
+        "dateSettings": {
+          "dateFormat": "YYYY-MM-DD",
+          "fontSize": "20px",
+          "fontWeight": "normal",
+          "showDate": false
+        },
+        "mode": "time",
+        "timeSettings": {
+          "fontSize": "48px",
+          "fontWeight": "normal"
+        },
+        "timezone": "",
+        "timezoneSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal",
+          "showTimezone": false,
+          "zoneFormat": "offsetAbbv"
+        }
+      },
+      "refreshSettings": {
+        "syncWithDashboard": false
+      },
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  $__time(time_column),\n  value1\nFROM\n  metric_table\nWHERE\n  $__timeFilter(time_column)\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeSettings": {
+        "customFormat": "HH:mm:ss",
+        "fontSize": "60px",
+        "fontWeight": "normal"
+      },
+      "timeShift": null,
+      "timezone": "Europe/Berlin",
+      "timezoneSettings": {
+        "fontSize": "12px",
+        "fontWeight": "normal",
+        "showTimezone": true,
+        "zoneFormat": "name"
+      },
+      "title": "",
+      "type": "grafana-clock-panel"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#C4162A",
+        "#37872D",
+        "#5794F2"
+      ],
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 0,
+        "y": 3
+      },
+      "id": 30,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "insgesamt",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(DISTINCT \"entity_id\") AS \"total_count\" \r\nFROM \"mtsmartmaas001\".\"etparkingspot\" WHERE \"entity_id\" LIKE '%-FR';",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#37872D",
+        "#37872D",
+        "#37872D"
+      ],
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 3,
+        "y": 3
+      },
+      "id": 22,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": " frei",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "status_count",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \"status\", (CASE WHEN \"status\" = 'free' THEN 0 WHEN \"status\" = 'occupied' THEN 1 END) AS \"num_status\", COUNT(\"status\") AS \"status_count\", \"total_count\" \r\nFROM \"mtsmartmaas001\".\"etparkingspot\" \r\n  JOIN (SELECT \"entity_id\" AS \"eId\", MAX(\"time_index\") AS \"last_update\" \r\n        FROM \"mtsmartmaas001\".\"etparkingspot\" \r\n        WHERE \"entity_id\" LIKE '%-FR' \r\n        GROUP BY \"entity_id\") SUB \r\n  ON (\"entity_id\" = \"eId\" AND \"time_index\" = \"last_update\") \r\n  JOIN (SELECT COUNT(DISTINCT \"entity_id\") AS \"total_count\" \r\n        FROM \"mtsmartmaas001\".\"etparkingspot\" WHERE \"entity_id\" LIKE '%-FR') SUB2 \r\n  ON (true) \r\nWHERE \"status\" = 'free' \r\nAND \"entity_id\" LIKE '%-FR' \r\nGROUP BY \"status\", \"total_count\";",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#C4162A",
+        "#C4162A",
+        "#C4162A"
+      ],
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 8,
+        "y": 3
+      },
+      "id": 24,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": " besetzt",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "status_count",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \"status\", (CASE WHEN \"status\" = 'free' THEN 0 WHEN \"status\" = 'occupied' THEN 1 END) AS \"num_status\", COUNT(\"status\") AS \"status_count\", \"total_count\" \r\nFROM \"mtsmartmaas001\".\"etparkingspot\" \r\n  JOIN (SELECT \"entity_id\" AS \"eId\", MAX(\"time_index\") AS \"last_update\" \r\n        FROM \"mtsmartmaas001\".\"etparkingspot\" \r\n        WHERE \"entity_id\" LIKE '%-FR' \r\n        GROUP BY \"entity_id\") SUB \r\n  ON (\"entity_id\" = \"eId\" AND \"time_index\" = \"last_update\") \r\n  JOIN (SELECT COUNT(DISTINCT \"entity_id\") AS \"total_count\" \r\n        FROM \"mtsmartmaas001\".\"etparkingspot\" WHERE \"entity_id\" LIKE '%-FR') SUB2 \r\n  ON (true) \r\nWHERE \"status\" = 'occupied' \r\nAND \"entity_id\" LIKE '%-FR' \r\nGROUP BY \"status\", \"total_count\";",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 11,
+        "x": 13,
+        "y": 4
+      },
+      "id": 28,
+      "links": [],
+      "options": {
+        "content": "Mithilfe einer neuen Sensorentechnik will die Stadt Kiel die Suche nach einem Parkplatz vereinfachen. Im Rahmen eines Pilotprojekts gibt es die ersten Sensoren schon auf 17 Parkplätzen entlang der Kiellinie. Sie verstecken sich in kleinen, schwarzen Hubbeln und funken die Information, ob ein Parkplatz frei oder besetzt ist, in regelmäßigen Zeitabständen an Rechner bei den Stadtwerken.\n\n",
+        "mode": "html"
+      },
+      "pluginVersion": "7.3.7",
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Informationen",
+      "type": "text"
+    },
+    {
+      "bgColor": null,
+      "cacheTimeout": null,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 13,
+        "x": 0,
+        "y": 6
+      },
+      "hideTimeOverride": true,
+      "id": 32,
+      "links": [],
+      "pluginVersion": "6.1.6",
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "groupByAliases": [
+            "type"
+          ],
+          "groupByColumns": [
+            "entity_type"
+          ],
+          "hide": false,
+          "metricAggs": [
+            {
+              "alias": "id",
+              "column": "entity_id",
+              "type": "raw"
+            },
+            {
+              "alias": "value",
+              "column": "availablespotnumber",
+              "type": "raw"
+            },
+            {
+              "alias": "geojson",
+              "column": "location",
+              "type": "raw"
+            },
+            {
+              "alias": "created_at",
+              "column": "time_index",
+              "type": "raw"
+            }
+          ],
+          "metricColumn": "entity_id",
+          "rawQuery": true,
+          "rawSql": "SELECT \"entity_id\" AS \"metric\", (CASE WHEN \"status\" = 'free' THEN 0 WHEN \"status\" = 'occupied' THEN 1 END) AS \"num_status\", \"time_index\" AS \"time\" \r\nFROM \"mtsmartmaas001\".\"etparkingspot\" \r\n  JOIN (SELECT \"entity_id\" AS \"eId\", MAX(\"time_index\") AS \"last_update\" \r\n        FROM \"mtsmartmaas001\".\"etparkingspot\" \r\n        WHERE \"entity_id\" LIKE '%-FR' \r\n        GROUP BY \"entity_id\") SUB \r\n  ON (\"entity_id\" = \"eId\" AND \"time_index\" = \"last_update\") \r\nWHERE \"entity_id\" LIKE '%-FR' \r\nGROUP BY 1, 2, 3;",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "status"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "location"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "mtsmartmaas001.etparkingspot",
+          "timeColumn": "time_index",
+          "where": [],
+          "whereClauses": []
+        }
+      ],
+      "timeFrom": "now/d",
+      "timeShift": null,
+      "title": "Aktueller Status der Parkplätze",
+      "trafficLightSettings": {
+        "digits": null,
+        "fontColor": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "greenThreshold": 0.4,
+        "invertScale": true,
+        "lightsPerLine": 4,
+        "linkTargetBlank": false,
+        "linkTooltip": "",
+        "linkUrl": "",
+        "max": 1,
+        "redThreshold": 0.4,
+        "renderLink": false,
+        "showTrend": false,
+        "showValue": false,
+        "sortLights": true,
+        "spreadControls": false,
+        "units": "",
+        "width": 20
+      },
+      "type": "snuids-trafficlights-panel"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "cacheTimeout": null,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 1,
+      "gridPos": {
+        "h": 9,
+        "w": 11,
+        "x": 13,
+        "y": 8
+      },
+      "hiddenSeries": false,
+      "hideTimeOverride": true,
+      "id": 2,
+      "interval": "",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "hideEmpty": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "aggregation": "Last",
+          "decimals": 2,
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
+          "format": "time_series",
+          "group": [],
+          "groupByAliases": [
+            "type"
+          ],
+          "groupByColumns": [
+            "entity_type"
+          ],
+          "hide": false,
+          "metricAggs": [
+            {
+              "alias": "id",
+              "column": "entity_id",
+              "type": "raw"
+            },
+            {
+              "alias": "value",
+              "column": "availablespotnumber",
+              "type": "raw"
+            },
+            {
+              "alias": "geojson",
+              "column": "location",
+              "type": "raw"
+            },
+            {
+              "alias": "created_at",
+              "column": "time_index",
+              "type": "raw"
+            }
+          ],
+          "metricColumn": "entity_id",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n  time_index AS \"time\",\r\n  entity_id AS metric,\r\n  (CASE WHEN \"status\" = 'free' THEN 0 WHEN \"status\" = 'occupied' THEN 1 END) AS \"status_value\" \r\nFROM \"mtsmartmaas001\".\"etparkingspot\" \r\nWHERE\r\n  entity_id IN ($kiel_parking_sensor_ids) \r\n  AND extract(week from \"time_index\") = extract(week from CURRENT_TIMESTAMP) \r\n  AND \"entity_id\" LIKE '%-FR' \r\nORDER BY 1,2;\r\n",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "status"
+                ],
+                "type": "column"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "location"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "mtsmartmaas001.etparkingspot",
+          "timeColumn": "time_index",
+          "units": "none",
+          "valueHandler": "Number Threshold",
+          "where": [],
+          "whereClauses": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": "now/w",
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Verlauf der gemeldeten Sensorzustände diese Woche",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "short",
+          "label": "frei / besetzt",
+          "logBase": 1,
+          "max": "1",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "header_js": "{}",
+      "id": 20,
+      "links": [],
+      "method": "iframe",
+      "mode": "html",
+      "params_js": "{\n from:ctrl.range.from.format('x'),  // x is unix ms timestamp\n to:ctrl.range.to.format('x'), \n height:ctrl.height,\n now:Date.now(),\n interval: ctrl.template('$__interval'),\n sample: 'Not escaped: $__interval',\n since:ctrl.lastRequestTime\n}",
+      "request": "http",
+      "responseType": "text",
+      "showErrors": true,
+      "showTime": false,
+      "showTimeFormat": "LTS",
+      "showTimePrefix": "",
+      "showTimeValue": "request",
+      "skipSameURL": true,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  $__time(time_column),\n  value1\nFROM\n  metric_table\nWHERE\n  $__timeFilter(time_column)\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "templateResponse": true,
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Status-Visualisierung der Parkplatzsensoren an der Kiellinie via Wirecloud Widget Mashup",
+      "type": "ryantxu-ajax-panel",
+      "url": "https://dashboards.2019.smartmaas.services/smartPredator/kiel-traffic-parking?mode=embedded&theme=wirecloud.defaulttheme",
+      "withCredentials": false
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": "",
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "CrateDB",
+        "definition": "SELECT DISTINCT entity_id FROM mtsmartmaas001.etparkingspot WHERE entity_id LIKE '%-FR';",
+        "error": null,
+        "hide": 0,
+        "includeAll": true,
+        "label": "Sensor wählen:",
+        "multi": true,
+        "name": "kiel_parking_sensor_ids",
+        "options": [],
+        "query": "SELECT DISTINCT entity_id FROM mtsmartmaas001.etparkingspot WHERE entity_id LIKE '%-FR';",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "Kiel - Parking",
+  "uid": "Cj5oHQsZz",
+  "version": 4
+}
