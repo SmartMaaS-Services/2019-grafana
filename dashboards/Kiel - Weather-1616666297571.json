@@ -41,6 +41,14 @@
       "islockvisible": false,
       "links": [],
       "metricValues": [],
+      "options": {
+        "forceImageRefresh": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Kiel.svg",
+        "lockSensors": false,
+        "mappings": [],
+        "sensors": [],
+        "sensorsTextSize": 10
+      },
       "realbgimage": "https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Kiel.svg",
       "sensors": [],
       "series": [],
@@ -104,6 +112,14 @@
       "islockvisible": false,
       "links": [],
       "metricValues": [],
+      "options": {
+        "forceImageRefresh": false,
+        "imageUrl": "http://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/weather-icon.png",
+        "lockSensors": false,
+        "mappings": [],
+        "sensors": [],
+        "sensorsTextSize": 10
+      },
       "realbgimage": "http://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/weather-icon.png",
       "sensors": [],
       "series": [],
@@ -167,7 +183,7 @@
         "content": "<h1 style=\"text-align: center; font-size: 6em;\">Wetter-Portal Kiel</h1>",
         "mode": "html"
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "format": "time_series",
@@ -526,10 +542,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:58868",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:58869",
           "name": "range to text",
           "value": 2
         }
@@ -594,6 +612,7 @@
       "valueFontSize": "50%",
       "valueMaps": [
         {
+          "$$hashKey": "object:58871",
           "op": "=",
           "text": "n/a",
           "value": "null"
@@ -1636,7 +1655,7 @@
       "withCredentials": false
     }
   ],
-  "schemaVersion": 26,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1674,5 +1693,5 @@
   "timezone": "",
   "title": "Kiel - Weather",
   "uid": "3EEUDlEWz",
-  "version": 4
+  "version": 5
 }

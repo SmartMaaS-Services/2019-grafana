@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 13,
-  "iteration": 1616580591459,
+  "iteration": 1616659000678,
   "links": [],
   "panels": [
     {
@@ -42,6 +42,14 @@
       "islockvisible": false,
       "links": [],
       "metricValues": [],
+      "options": {
+        "forceImageRefresh": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Kiel.svg",
+        "lockSensors": false,
+        "mappings": [],
+        "sensors": [],
+        "sensorsTextSize": 10
+      },
       "realbgimage": "https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Kiel.svg",
       "sensors": [],
       "series": [],
@@ -105,7 +113,7 @@
         "content": "<h1 style=\"text-align: center; font-size: 6em;\">Parkplatzmonitor Kiel</h1>",
         "mode": "html"
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "format": "time_series",
@@ -141,6 +149,7 @@
     },
     {
       "datasource": null,
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -149,30 +158,26 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 6,
+        "w": 2,
         "x": 13,
         "y": 0
       },
-      "header_js": "{}",
-      "id": 26,
-      "links": [],
-      "method": "GET",
-      "mode": "image",
-      "params_js": "{\n from:ctrl.range.from.format('x'),  // x is unix ms timestamp\n to:ctrl.range.to.format('x'), \n height:ctrl.height,\n now:Date.now(),\n interval: ctrl.template('$__interval'),\n sample: 'Not escaped: $__interval',\n since:ctrl.lastRequestTime\n}",
-      "request": "http",
-      "responseType": "arraybuffer",
-      "showErrors": true,
-      "showTime": false,
-      "showTimeFormat": "LTS",
-      "showTimePrefix": null,
-      "showTimeValue": "request",
-      "skipSameURL": true,
+      "id": 36,
+      "options": {
+        "forceImageRefresh": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Parking_icon.svg",
+        "lockSensors": false,
+        "mappings": [],
+        "sensors": [],
+        "sensorsTextSize": 10
+      },
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "format": "time_series",
           "group": [],
           "metricColumn": "none",
-          "rawQuery": true,
+          "rawQuery": false,
           "rawSql": "SELECT\n  $__time(time_column),\n  value1\nFROM\n  metric_table\nWHERE\n  $__timeFilter(time_column)\n",
           "refId": "A",
           "select": [
@@ -195,13 +200,67 @@
           ]
         }
       ],
-      "templateResponse": true,
       "timeFrom": null,
       "timeShift": null,
       "title": "",
-      "type": "ryantxu-ajax-panel",
-      "url": "https://www.ndr.de/nachrichten/schleswig-holstein/parkplatz268_v-contentxl.jpg",
-      "withCredentials": false
+      "type": "pierosavi-imageit-panel"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 15,
+        "y": 0
+      },
+      "id": 34,
+      "options": {
+        "forceImageRefresh": false,
+        "imageUrl": "https://www.ndr.de/nachrichten/schleswig-holstein/parkplatz268_v-contentxl.jpg",
+        "lockSensors": false,
+        "mappings": [],
+        "sensors": [],
+        "sensorsTextSize": 10
+      },
+      "pluginVersion": "7.4.5",
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  $__time(time_column),\n  value1\nFROM\n  metric_table\nWHERE\n  $__timeFilter(time_column)\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "pierosavi-imageit-panel"
     },
     {
       "bgColor": "rgb(31, 55, 92)",
@@ -649,7 +708,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 5,
         "w": 11,
         "x": 13,
         "y": 4
@@ -660,7 +719,7 @@
         "content": "Mithilfe einer neuen Sensorentechnik will die Stadt Kiel die Suche nach einem Parkplatz vereinfachen. Im Rahmen eines Pilotprojekts gibt es die ersten Sensoren schon auf 17 Parkplätzen entlang der Kiellinie. Sie verstecken sich in kleinen, schwarzen Hubbeln und funken die Information, ob ein Parkplatz frei oder besetzt ist, in regelmäßigen Zeitabständen an Rechner bei den Stadtwerken.\n\n",
         "mode": "html"
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "format": "time_series",
@@ -820,7 +879,7 @@
         "h": 9,
         "w": 11,
         "x": 13,
-        "y": 8
+        "y": 9
       },
       "hiddenSeries": false,
       "hideTimeOverride": true,
@@ -844,7 +903,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -975,7 +1034,7 @@
         "h": 14,
         "w": 24,
         "x": 0,
-        "y": 17
+        "y": 18
       },
       "header_js": "{}",
       "id": 20,
@@ -1029,7 +1088,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 26,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1043,6 +1102,7 @@
         },
         "datasource": "CrateDB",
         "definition": "SELECT DISTINCT entity_id FROM mtsmartmaas001.etparkingspot WHERE entity_id LIKE '%-FR';",
+        "description": null,
         "error": null,
         "hide": 0,
         "includeAll": true,
@@ -1095,5 +1155,5 @@
   "timezone": "",
   "title": "Kiel - Parking",
   "uid": "Cj5oHQsZz",
-  "version": 4
+  "version": 5
 }

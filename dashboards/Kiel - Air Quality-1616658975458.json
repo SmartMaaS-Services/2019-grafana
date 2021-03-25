@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 2,
-  "iteration": 1616429813688,
+  "iteration": 1616658072200,
   "links": [],
   "panels": [
     {
@@ -42,6 +42,14 @@
       "islockvisible": false,
       "links": [],
       "metricValues": [],
+      "options": {
+        "forceImageRefresh": false,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Kiel.svg",
+        "lockSensors": false,
+        "mappings": [],
+        "sensors": [],
+        "sensorsTextSize": 10
+      },
       "realbgimage": "https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Kiel.svg",
       "sensors": [],
       "series": [],
@@ -105,6 +113,14 @@
       "islockvisible": false,
       "links": [],
       "metricValues": [],
+      "options": {
+        "forceImageRefresh": false,
+        "imageUrl": "https://www.pinclipart.com/picdir/big/14-147511_pollution-clipart-clean-air-mahapps-logo-png-download.png",
+        "lockSensors": false,
+        "mappings": [],
+        "sensors": [],
+        "sensorsTextSize": 10
+      },
       "realbgimage": "https://www.pinclipart.com/picdir/big/14-147511_pollution-clipart-clean-air-mahapps-logo-png-download.png",
       "sensors": [],
       "series": [],
@@ -168,7 +184,7 @@
         "content": "<h1 style=\"text-align: center; font-size: 6em;\">Luftqualität Kiel</h1>",
         "mode": "html"
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "format": "time_series",
@@ -326,7 +342,7 @@
         "content": "Verbindlich einzuhaltener Jahresmittelwert für Feinstaub der Kategorie PM2,5 beträgt 25 µg/m³. Für PM10 beträgt die Grenze 40 µg/m³.\n",
         "mode": "html"
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "format": "time_series",
@@ -407,7 +423,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "pointradius": 0.5,
       "points": true,
       "renderer": "flot",
@@ -633,7 +649,7 @@
         },
         "overrides": []
       },
-      "format": "conμgm3",
+      "format": "none",
       "gauge": {
         "maxValue": 100,
         "minValue": 0,
@@ -654,10 +670,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:96",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:97",
           "name": "range to text",
           "value": 2
         }
@@ -666,7 +684,7 @@
       "nullPointMode": "connected",
       "nullText": null,
       "pluginVersion": "6.1.6",
-      "postfix": "",
+      "postfix": "µg/m³",
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
@@ -728,6 +746,7 @@
       "valueFontSize": "50%",
       "valueMaps": [
         {
+          "$$hashKey": "object:99",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -899,7 +918,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "pointradius": 0.5,
       "points": true,
       "renderer": "flot",
@@ -1181,7 +1200,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 26,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1190,21 +1209,25 @@
         "allValue": "",
         "current": {
           "selected": true,
+          "tags": [],
           "text": [
-            "SDS011_3653",
-            "SDS011_37477",
-            "SDS011_37619",
-            "SDS011_37621"
+            "SDS011_11394",
+            "SDS011_13252",
+            "SDS011_15303",
+            "SDS011_18808",
+            "SDS011_18130"
           ],
           "value": [
-            "SDS011_3653",
-            "SDS011_37477",
-            "SDS011_37619",
-            "SDS011_37621"
+            "SDS011_11394",
+            "SDS011_13252",
+            "SDS011_15303",
+            "SDS011_18808",
+            "SDS011_18130"
           ]
         },
         "datasource": "CrateDB",
         "definition": "SELECT DISTINCT entity_id FROM mtsmartmaas001.etairqualityobserved WHERE WITHIN(\"location_centroid\", 'POLYGON ((9.927864074707031 54.24817702140307, 10.323028564453125 54.24817702140307, 10.323028564453125 54.43530732913595, 9.927864074707031 54.43530732913595, 9.927864074707031 54.24817702140307))');",
+        "description": null,
         "error": null,
         "hide": 0,
         "includeAll": false,
@@ -1258,5 +1281,5 @@
   "timezone": "",
   "title": "Kiel - Air Quality",
   "uid": "6rMLygUZk",
-  "version": 6
+  "version": 7
 }

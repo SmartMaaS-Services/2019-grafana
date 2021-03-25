@@ -40,6 +40,14 @@
       "islockvisible": false,
       "links": [],
       "metricValues": [],
+      "options": {
+        "forceImageRefresh": false,
+        "imageUrl": "http://icons.iconarchive.com/icons/bokehlicia/captiva/256/utilities-system-monitor-icon.png",
+        "lockSensors": false,
+        "mappings": [],
+        "sensors": [],
+        "sensorsTextSize": 10
+      },
       "realbgimage": "http://icons.iconarchive.com/icons/bokehlicia/captiva/256/utilities-system-monitor-icon.png",
       "sensors": [],
       "series": [],
@@ -103,7 +111,7 @@
         "content": "<h1 style=\"text-align: center; font-size: 6em;\">SmartMaaS System Inspector</h1>",
         "mode": "html"
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "format": "time_series",
@@ -266,7 +274,7 @@
       "withCredentials": false
     }
   ],
-  "schemaVersion": 26,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -304,5 +312,5 @@
   "timezone": "",
   "title": "Kiel - System Monitoring",
   "uid": "94mAjCyWk",
-  "version": 6
+  "version": 7
 }
